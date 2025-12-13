@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  sound-ml:
+    build: .
+    container_name: sound_universe_container
+    # Если нужно перезапускать сервер при падении, раскомментируй строку ниже:
+    # restart: always
+    ports:
+      - "8000:8000"  # Пробрасываем порт API наружу
+    volumes:
+      # === МАГИЯ ЗДЕСЬ ===
+      # СЛЕВА: Путь на ТВОЕМ компьютере (где лежат данные)
+      # СПРАВА: Путь внутри Докера (куда мы договорились в config.py)
+      - D:\SoundUniverse_ML:/data
+    environment:
+      # Говорим нашей программе, что данные теперь в /data
+      - DATA_PATH=/data
