@@ -1,0 +1,16 @@
+# Папки редактора и системы
+.idea/
+__pycache__/
+venv/
+.DS_Store
+
+# Датасеты (слишком тяжелые)
+D:/Custom_dataset
+raw_dataset/
+processed_data/
+
+# Логи и временные файлы
+logs/
+temp_*
+*.log
+skipped_log.txt
