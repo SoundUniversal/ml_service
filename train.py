@@ -12,7 +12,7 @@ from tqdm import tqdm
 # ИМПОРТИРУЕМ НАСТРОЙКИ
 import config
 
-# --- ЛОГИРОВАНИЕ ---
+# Настройка логов
 log_filename = f"train_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.log"
 logging.basicConfig(
     filename=os.path.join(config.LOG_DIR, log_filename),

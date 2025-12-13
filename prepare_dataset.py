@@ -39,7 +39,7 @@ def process_and_save(files, source_genre_path, output_genre_path, genre_name, sk
             except Exception:
                 raise ValueError("Не удалось прочитать заголовок")
 
-            # Логика нарезки (45 vs 30)
+            # Логика нарезки (45 или 30)
             if full_duration >= 45:
                 crop_size = 45
             elif full_duration >= 30:
@@ -87,7 +87,6 @@ def prepare_dataset():
     logging.info("🚀 СТАРТ ПОДГОТОВКИ")
     logging.info(f"Параметры: SR={config.SAMPLE_RATE}, MELS={config.N_MELS}")
 
-    # Используем config.RAW_DATASET_DIR вместо старого SOURCE_PATH
     source_path = config.RAW_DATASET_DIR
 
     if os.path.exists(config.PROCESSED_DIR):
