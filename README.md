@@ -27,7 +27,7 @@ MyMusicData/
 # Инструкция по запуску
 1. Создайте проект в IDE и скопируйте репозиторий
 ```code
-git clone https://github.com/ВАШ_НИК/SoundUniverse-ML-Service.git
+git clone https://github.com/SoundUniversal/ml_service
 cd SoundUniverse-ML-Service
 ```
 2. Откройте файл docker-compose.yml и замените путь к данным на ваш
